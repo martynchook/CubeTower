@@ -12,6 +12,8 @@ public class CanvasButtons : MonoBehaviour {
         }
     }
 
+/*==============================================================*/
+
     public void RestartGame () {
         if (PlayerPrefs.GetString("music") != "No ") {
             GetComponent<AudioSource>().Play();
@@ -19,12 +21,32 @@ public class CanvasButtons : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+/*==============================================================*/
+
+    public void LoadShop () {
+        if (PlayerPrefs.GetString("music") != "No ") {
+            GetComponent<AudioSource>().Play();
+        }
+        SceneManager.LoadScene("Shop");
+    }
+
+     public void CloseShop () {
+        if (PlayerPrefs.GetString("music") != "No ") {
+            GetComponent<AudioSource>().Play();
+        }
+        SceneManager.LoadScene("Main");
+    }
+
+/*==============================================================*/
+
     public void LoadGitHub () {
          if (PlayerPrefs.GetString("music") != "No ") {
             GetComponent<AudioSource>().Play();
         }
         Application.OpenURL("https://github.com/martynchook/Waytiti-Studio");
     }
+
+/*==============================================================*/
 
     public void MusicWork() {
         // проверка включена ли музыка
